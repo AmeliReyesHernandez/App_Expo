@@ -31,6 +31,24 @@ export default function Home({ navigation }) {
       likes: 2,
       comentarios: [],
     },
+    {
+      id: 4,
+      usuario: "Sandy Marissa",
+      fotoUsuario: "https://i.pinimg.com/736x/da/10/23/da1023268efcddf8823b25ee5c6851ef.jpg",
+      titulo: "En una peda",
+      fotoPost: "https://i.pinimg.com/736x/3d/b6/f6/3db6f6eacdaf294c9eaa54d45923a590.jpg",
+      likes: 2,
+      comentarios: [],
+    },
+    {
+      id: 5,
+      usuario: "Blanca Estela",
+      fotoUsuario: "https://i.pinimg.com/736x/f4/f5/af/f4f5af56f85d29d258343da5b4d4f26f.jpg",
+      titulo: "Viajando",
+      fotoPost: "https://i.pinimg.com/736x/03/b2/e1/03b2e17674c05947fe0335700b40c9dc.jpg",
+      likes: 5,
+      comentarios: [],
+    },
   ]);
 
   // Función para dar like
