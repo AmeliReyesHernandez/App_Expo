@@ -65,22 +65,15 @@ export default function Publicaciones() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
-    backgroundColor: "#f9f9f9", 
+    padding: 10,
+    backgroundColor: "#e0e0e0ff", 
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     marginTop: 10,
   },
-  noPostsText: {
-    fontSize: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginTop: 50,
-    color: "#000000ff",
-  },
   postCard: {
     backgroundColor: "#fff",
-    borderRadius: 12,
+    borderRadius: 20,
     marginBottom: 20,
     padding: 15,
     elevation: 3,
@@ -89,10 +82,9 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 200,
     resizeMode: "cover",
-    borderRadius: 10,
+    borderRadius: 15,
     marginVertical: 10,
   },
-
   postTitle: { 
     fontSize: 18, 
     fontWeight: "bold", 
@@ -100,7 +92,7 @@ const styles = StyleSheet.create({
   },
   postCategory: { 
     fontSize: 14, 
-    color: "#666", 
+    color: "#996565ff", 
     marginBottom: 5, 
     fontStyle: "italic" 
   },
