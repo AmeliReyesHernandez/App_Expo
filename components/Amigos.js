@@ -118,10 +118,10 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   foto: {
-  width: 60,
-  height: 60,
-  borderRadius: 30,
-  marginRight: 10,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    marginRight: 10,
 },
   nombre: { 
     fontSize: 16, 
@@ -132,11 +132,9 @@ const styles = StyleSheet.create({
     color: "#555" 
   },
   form: {
-    backgroundColor: "#fff",
+    backgroundColor: "#f2f2f2",
     padding: 15,
-    borderRadius: 10,
-    elevation: 2,
-    margin: 20,
+    elevation: 1,
     alignItems: "center",
   },
   button: {
