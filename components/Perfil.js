@@ -9,10 +9,7 @@ export default function Home({ navigation }) {
       <ScrollView contentContainerStyle={styles.scrollContainer}>
       {/* Perfil */}
       <View style={styles.profileCard}>
-        <Image
-          source={{
-            uri: "https://i.pinimg.com/736x/df/df/c3/dfdfc355aae1c75fa555bf473d109343.jpg",}}style={styles.avatar}/>
-
+        <Image source={{ uri: "https://i.pinimg.com/736x/69/cd/d7/69cdd70e2366dad8a5e3dc43eaf9da06.jpg",}}style={styles.avatar}/>
         <Text style={styles.name}>Ameli Reyes</Text>
         <Text style={styles.bio}> Estudia Ing en Sistemas y reprobó </Text>
       </View>
