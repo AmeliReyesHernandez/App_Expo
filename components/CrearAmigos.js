@@ -27,20 +27,27 @@ export default function CrearAmigos({ navigation }) {
     <View style={styles.container}>
       {/* Navbar */}
       <View style={styles.navbar}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Ionicons name="arrow-back" size={25} color="#000" />
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Ionicons name="arrow-back" size={24} color="#000" />
         </TouchableOpacity>
         <Text style={styles.navTitle}>Agregar Amigo</Text>
       </View>
 
       {/* Formulario */}
-      <TextInput placeholder="Nombre" value={nombre} onChangeText={setNombre} style={styles.input} />
-      <TextInput placeholder="Correo" value={correo} onChangeText={setCorreo} keyboardType="email-address" autoCapitalize="none" textContentType="emailAddress" style={styles.input}/>
-      <TextInput placeholder="Teléfono" value={telefono} onChangeText={setTelefono} keyboardType="phone-pad" style={styles.input} />
-
+            <View style={styles.form}>
+              <Text style={styles.label}>Nombre</Text>
+              <TextInput style={styles.input} placeholder="Escribe el nombre" value={nombre} onChangeText={setNombre} />
+      
+              <Text style={styles.label}>Correo</Text>
+              <TextInput style={styles.input} placeholder="Escribe el correo" value={correo} onChangeText={setCorreo} keyboardType="email-address" autoCapitalize="none" />
+      
+              <Text style={styles.label}>Teléfono</Text>
+              <TextInput style={styles.input} placeholder="Numero de telefono" value={telefono} onChangeText={setTelefono} keyboardType="phone-pad"/>
+      
       <TouchableOpacity style={styles.button} onPress={agregarAmigo}>
         <Text style={styles.buttonText}>Guardar</Text>
       </TouchableOpacity>
+    </View>
     </View>
   );
 }
@@ -48,33 +55,47 @@ export default function CrearAmigos({ navigation }) {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: "#f2f2f2", 
-    padding: 20 
+    backgroundColor: "#fafafaff", 
   },
-  navbar: { 
-    flexDirection: "row", 
-    alignItems: "center", 
-    paddingBottom: 20 
+  navbar: {
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#fff",
   },
   navTitle: { 
     flex: 1, 
     textAlign: "center", 
-    fontSize: 20, 
-    fontWeight: "bold" 
+    fontSize: 18, 
+    fontWeight: "bold" ,
+    maginTop: 15
   },
+  backButton: { 
+    marginTop:20,
+    flexDirection: "row", 
+    alignItems: "center" 
+},
+  form: { 
+    padding: 20 
+},
+  label: { 
+    fontSize: 16, 
+    fontWeight: "600", 
+    marginTop: 20 
+},
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 15,
-    backgroundColor: "#fff",
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginTop: 10,
   },
   button: {
     backgroundColor: "#a498a8ff",
     padding: 15,
     borderRadius: 8,
     alignItems: "center",
+    marginTop:20
   },
   buttonText: {
     color: "#fff",

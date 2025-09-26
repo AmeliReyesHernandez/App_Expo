@@ -98,16 +98,17 @@ const styles = StyleSheet.create({
     borderBottomColor: "#ddd",
   },
   backButton: { 
-    marginRight: 10, 
-    marginTop: 15 
-  },
-  navTitle: {
-    flex: 1,
-    textAlign: "center",
-    fontSize: 18,
-    fontWeight: "bold",
+    flexDirection:"row",
     marginTop: 15,
+    alignItems:"center" 
   },
+  navTitle: { 
+    flex: 1, 
+    textAlign: "center", 
+    fontSize: 18, 
+    fontWeight: "bold",
+    marginTop:15 
+},
   amigoCard: {
     flexDirection: "row",
     alignItems: "center",
