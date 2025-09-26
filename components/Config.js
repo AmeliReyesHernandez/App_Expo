@@ -5,19 +5,11 @@ import { Ionicons } from "@expo/vector-icons";
 export default function Config({ navigation }) {
   const [modoOscuro, setModoOscuro] = useState(false);
   const [notificaciones, setNotificaciones] = useState(true);
+  const [idioma, setIdioma] = useState("Español");
 
   const toggleModoOscuro = () => {
     setModoOscuro(!modoOscuro);
     Alert.alert("Modo Oscuro", !modoOscuro ? "Activado" : "Desactivado");
-  };
-
-  const toggleNotificaciones = () => {
-    setNotificaciones(!notificaciones);
-    Alert.alert("Notificaciones", !notificaciones ? "Activadas" : "Desactivadas");
-  };
-
-  const abrirAjustesAvanzados = () => {
-    Alert.alert("Ajustes Avanzados", "Aquí irían las configuraciones avanzadas.");
   };
 
   // Estilos modo oscuro
@@ -35,22 +27,11 @@ export default function Config({ navigation }) {
         <Text style={[styles.navTitle, { color: texto }]}>Configuración</Text>
       </View>
 
-      {/* Opciones de configuración */}
-      <TouchableOpacity  style={[styles.option, { borderBottomColor: borderColor }]} onPress={toggleModoOscuro}>
+      {/* Opciones */}
+      <TouchableOpacity style={[styles.option, { borderBottomColor: borderColor }]} onPress={toggleModoOscuro}>
         <Ionicons name="moon-outline" size={24} color={texto} />
         <Text style={[styles.optionText, { color: texto }]}>Modo Oscuro</Text>
         <Switch value={modoOscuro} onValueChange={toggleModoOscuro} style={{ marginLeft: "auto" }}/>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={[styles.option, { borderBottomColor: borderColor }]} onPress={toggleNotificaciones} >
-        <Ionicons name="notifications-outline" size={24} color={texto} />
-        <Text style={[styles.optionText, { color: texto }]}>Notificaciones</Text>
-        <Switch value={notificaciones} onValueChange={toggleNotificaciones} style={{ marginLeft: "auto" }} />
-      </TouchableOpacity>
-
-      <TouchableOpacity style={[styles.option, { borderBottomColor: borderColor }]}  onPress={abrirAjustesAvanzados}>
-        <Ionicons name="settings-outline" size={24} color={texto} />
-        <Text style={[styles.optionText, { color: texto }]}>Ajustes Avanzados</Text>
       </TouchableOpacity>
     </View>
   );
@@ -87,5 +68,3 @@ const styles = StyleSheet.create({
     fontSize: 16 
   },
 });
-
-
