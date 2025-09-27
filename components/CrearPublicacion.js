@@ -14,10 +14,8 @@ export default function CrearPublicacion({ navigation }) {
       Alert.alert("Error", "Por favor llena todos los campos");
       return;
     }
-
     try {
-      await axios.post("http://192.168.0.103:3000/posts", {titulo, descripcion, categoria, imagen: imagenUrl,});
-
+      await axios.post("http://192.168.200.71:3000/posts", {titulo, descripcion, categoria, imagen: imagenUrl,});
       Alert.alert("Éxito", "Publicación agregada");
       setTitulo("");
       setDescripcion("");
@@ -92,7 +90,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop:15 
 },
-
   form: { 
     padding: 20 
 },

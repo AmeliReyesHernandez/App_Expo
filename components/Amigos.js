@@ -10,7 +10,7 @@ export default function Amigos({ navigation }) {
   // Traer amigos desde el backend
   const fetchAmigos = useCallback(async () => {
     try {
-      const response = await axios.get("http://192.168.0.103:3000/amigos");
+      const response = await axios.get("http://192.168.200.71:3000/amigos");
       if (Array.isArray(response.data)) {
         setAmigos(response.data);
       } else {
@@ -31,7 +31,7 @@ export default function Amigos({ navigation }) {
   // Eliminar amigo en backend
   const eliminarAmigo = async (id) => {
     try {
-      await axios.delete(`http://192.168.0.103:3000/amigos/${id}`);
+      await axios.delete(`http://192.168.200.71:3000/amigos/${id}`);
       Alert.alert("Éxito", "Amigo eliminado");
       fetchAmigos(); 
     } catch (error) {

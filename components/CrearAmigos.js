@@ -15,7 +15,7 @@ export default function CrearAmigos({ navigation }) {
     }
 
     try {
-      await axios.post("http://192.168.0.103:3000/amigos", { nombre, correo, telefono });
+      await axios.post("http://192.168.200.71:3000/amigos", { nombre, correo, telefono });
       Alert.alert("Éxito", "Amigo agregado correctamente"); navigation.goBack();
     } catch (error) {
       console.error(error);
@@ -42,7 +42,7 @@ export default function CrearAmigos({ navigation }) {
               <TextInput style={styles.input} placeholder="Escribe el correo" value={correo} onChangeText={setCorreo} keyboardType="email-address" autoCapitalize="none" />
       
               <Text style={styles.label}>Teléfono</Text>
-              <TextInput style={styles.input} placeholder="Numero de telefono" value={telefono} onChangeText={setTelefono} keyboardType="phone-pad"/>
+              <TextInput style={styles.input} placeholder="Numero de telefono" value={telefono} onChangeText={setTelefono} keyboardType="phone-pad" maxLength={10} />
       
       <TouchableOpacity style={styles.button} onPress={agregarAmigo}>
         <Text style={styles.buttonText}>Guardar</Text>

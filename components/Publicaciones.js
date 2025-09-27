@@ -10,7 +10,7 @@ export default function Publicaciones() {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://192.168.0.103:3000/posts");
+      const response = await axios.get("http://192.168.200.71:3000/posts");
       setPosts(response.data);
     } catch (error) {
       console.error("Error al cargar publicaciones", error);
@@ -21,7 +21,7 @@ export default function Publicaciones() {
 
   const eliminarPost = async (id) => {
     try {
-      await axios.delete(`http://192.168.0.103:3000/posts/${id}`);
+      await axios.delete(`http://192.168.200.71:3000/posts/${id}`);
       Alert.alert("Éxito", "Publicación eliminada");
       fetchPosts();
     } catch (error) {

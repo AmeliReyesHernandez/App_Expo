@@ -44,9 +44,9 @@ export default function Home({ navigation }) {
       id: 5,
       usuario: "Blanca Estela",
       fotoUsuario: "https://i.pinimg.com/736x/f4/f5/af/f4f5af56f85d29d258343da5b4d4f26f.jpg",
-      titulo: "Viajando",
+      titulo: "Estresado",
       fotoPost: "https://i.pinimg.com/736x/03/b2/e1/03b2e17674c05947fe0335700b40c9dc.jpg",
-      likes: 5,
+      likes: 2,
       comentarios: [],
     },
   ]);

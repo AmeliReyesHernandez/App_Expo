@@ -4,8 +4,6 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function Config({ navigation }) {
   const [modoOscuro, setModoOscuro] = useState(false);
-  const [notificaciones, setNotificaciones] = useState(true);
-  const [idioma, setIdioma] = useState("Español");
 
   const toggleModoOscuro = () => {
     setModoOscuro(!modoOscuro);

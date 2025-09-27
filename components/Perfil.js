@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity,ScrollView } from "reac
 import { Ionicons } from "@expo/vector-icons";
 import Publicaciones from "./Publicaciones";
 
-export default function Home({ navigation }) {
+export default function Perfil({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
